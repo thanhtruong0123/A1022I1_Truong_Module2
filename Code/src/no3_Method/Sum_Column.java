@@ -1,15 +1,38 @@
 package no3_Method;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Sum_Column {
     public static void main(String[] args) {
-        double[][] arr = {{1, 2, 3}, {4, 5, 6}, {6, 7, 8}};
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so hang cua mang");
+        int row = sc.nextInt();
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+        System.out.println("Nhap so cot cua mang");
+        int column = sc.nextInt();
 
+        double[][] arr = new double[row][column];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.println("Nhap gia tri cua mang tai hang " + i + ", cot " + j);
+                arr[i][j] = sc.nextDouble();
             }
         }
+
+        System.out.println("Nhap so cot ban muon tinh tong");
+        int columnToSum = sc.nextInt();
+
+        int sumColumn = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (j == columnToSum) {
+                    sumColumn += arr[i][j];
+                }
+            }
+        }
+
+        System.out.println("Tong cac gia tri tai cot " + columnToSum + ": " + sumColumn);
     }
 }

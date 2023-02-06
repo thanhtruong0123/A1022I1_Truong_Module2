@@ -8,7 +8,18 @@ public class Max_Value {
         System.out.println("Enter the length of arr's row");
         int row = sc.nextInt();
 
-        double[][] arr = {{1.0, 2.0, 3.0}, {44.0, 5.0, 6.0}, {7.0, 8.0, 9.0}};
+        System.out.println("Enter the length of arr's column");
+        int column = sc.nextInt();
+
+        double[][] arr = new double[row][column];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.println("Enter the value of array at row " + i + " column " + j);
+                arr[i][j] = sc.nextDouble();
+            }
+        }
+
         double max = arr[0][0];
 
         for (int i = 0; i < arr.length; i++) {
@@ -18,6 +29,6 @@ public class Max_Value {
                 }
             }
         }
-        System.out.println("Phần tử lớn nhất là: " + max);
+        System.out.println("The max value is: " + max);
     }
 }
