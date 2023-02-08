@@ -1,8 +1,8 @@
-package no3_Array;
+package no3_array;
 
 import java.util.Scanner;
 
-public class Array_Merging {
+public class ArrayMerging {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập chiều dài mảng 1");

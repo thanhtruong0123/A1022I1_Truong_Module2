@@ -1,8 +1,8 @@
-package no3_Method;
+package no3_method;
 
 import java.util.Scanner;
 
-public class Count_Char {
+public class CountChar {
     static  int count = 0;
     public static void main(String[] args) {
         String str = "Code Gym Da nang";

@@ -1,4 +1,4 @@
-package no5_Access_Modifier.Access_Modifier;
+package no5_access_modifier.access_modifier;
 
 public class Test_Circle {
     public static void main(String[] args) {

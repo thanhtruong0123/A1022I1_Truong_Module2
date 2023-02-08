@@ -1,8 +1,8 @@
-package no2_Loop;
+package no2_loop;
 
 import java.util.Scanner;
 
-public class Prime_Num_Below_100 {
+public class PrimeNumBelow100 {
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
            int checkNum = 0;

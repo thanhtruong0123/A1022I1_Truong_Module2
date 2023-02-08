@@ -1,8 +1,8 @@
-package no3_Method;
+package no3_method;
 
 import java.util.Scanner;
 
-public class Diagonal_Sum {
+public class DiagonalSum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số hàng của mảng");

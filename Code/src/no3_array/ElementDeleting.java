@@ -1,8 +1,8 @@
-package no3_Array;
+package no3_array;
 
 import java.util.Scanner;
 
-public class Element_Deleting {
+public class ElementDeleting {
     static int index;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -1,9 +1,9 @@
-package no3_Method;
+package no3_method;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Sum_Column {
+public class SumColumn {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so hang cua mang");

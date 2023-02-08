@@ -1,8 +1,8 @@
-package no2_Loop;
+package no2_loop;
 
 import java.util.Scanner;
 
-public class Prime_Number {
+public class PrimeNumber {
     static int count = 1;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

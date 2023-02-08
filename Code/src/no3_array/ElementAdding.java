@@ -1,8 +1,8 @@
-package no3_Array;
+package no3_array;
 
 import java.util.Scanner;
 
-public class Element_Adding {
+public class ElementAdding {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập độ dài Mảng");

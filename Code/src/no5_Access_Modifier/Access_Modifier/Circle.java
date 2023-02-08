@@ -1,4 +1,4 @@
-package no5_Access_Modifier.Access_Modifier;
+package no5_access_modifier.access_modifier;
 
 public class Circle {
     public static final double PI = 3.14;

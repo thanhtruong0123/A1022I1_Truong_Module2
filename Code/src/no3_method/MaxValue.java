@@ -1,8 +1,8 @@
-package no3_Method;
+package no3_method;
 
 import java.util.Scanner;
 
-public class Max_Value {
+public class MaxValue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of arr's row");

@@ -1,8 +1,8 @@
-package no3_Method;
+package no3_method;
 
 import java.util.Scanner;
 
-public class Min_Value {
+public class MinValue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập độ dài mảng");

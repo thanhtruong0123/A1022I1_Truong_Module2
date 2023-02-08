@@ -1,8 +1,8 @@
-package no4_Class;
+package no4_class;
 
 import java.util.Scanner;
 
-public class Quadratic_Equation {
+public class QuadraticEquation {
     private double a;
     private double b;
     private double c;
@@ -10,7 +10,7 @@ public class Quadratic_Equation {
     private double root1;
     private double root2;
 
-    public Quadratic_Equation(double a, double b, double c) {
+    public QuadraticEquation(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -52,16 +52,16 @@ public class Quadratic_Equation {
         System.out.println("Nhap c");
         double c = sc.nextDouble();
 
-        Quadratic_Equation quadratic_equation = new Quadratic_Equation(a, b, c);
+        QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
 
-        double delta = quadratic_equation.getDelta();
+        double delta = quadraticEquation.getDelta();
 
         if (delta > 0) {
-            double root1 = quadratic_equation.getRoot1();
-            double root2 = quadratic_equation.getRoot2();
+            double root1 = quadraticEquation.getRoot1();
+            double root2 = quadraticEquation.getRoot2();
             System.out.println("Nghiem phuong trinh x1: " + root1 + ", x2: " + root2);
         } else if (delta == 0) {
-            double root = quadratic_equation.getRoot1();
+            double root = quadraticEquation.getRoot1();
             System.out.println("Phuong trinh co mot nghiem x1: " + root);
         } else {
             System.out.println("Phuong trinh vo nghiem");
