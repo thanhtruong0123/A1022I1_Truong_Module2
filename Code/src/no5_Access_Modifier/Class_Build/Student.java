@@ -1,4 +1,4 @@
-package no5_Access_Modifier.Class_Build;
+package no5_access_modifier.class_build;
 
 public class Student {
     private static String name = "John";

@@ -1,6 +1,6 @@
-package no5_Access_Modifier.Class_Build;
+package no5_access_modifier.class_build;
 
-public class Test_Student {
+public class TestStudent {
     public static void main(String[] args) {
         Student.setName("Trường");
         Student.setClasses("A1022I1");
