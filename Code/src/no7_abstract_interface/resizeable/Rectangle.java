@@ -1,6 +1,6 @@
 package no7_abstract_interface.resizeable;
 
-public class Rectangle extends Shape implements Resizeable {
+public class Rectangle extends Shape implements IResizeable {
     private double length;
     private double width;
 

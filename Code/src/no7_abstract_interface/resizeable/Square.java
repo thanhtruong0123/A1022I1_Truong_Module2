@@ -1,6 +1,6 @@
 package no7_abstract_interface.resizeable;
 
-public class Square extends Shape implements Resizeable {
+public class Square extends Shape implements IResizeable {
     private double length;
 
     public Square() {

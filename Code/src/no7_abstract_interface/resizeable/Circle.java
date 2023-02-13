@@ -1,8 +1,6 @@
 package no7_abstract_interface.resizeable;
 
-import java.util.Scanner;
-
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape implements IResizeable {
     private double radius;
     public Circle() {
     }
