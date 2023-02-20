@@ -11,7 +11,6 @@ public class MyList <E> {
         elements = new Object[DEFAULT_CAPACITY];
     }
 
-
     public MyList(int capacity) {
         elements = new Object[capacity];
     }
