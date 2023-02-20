@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class MyListTest {
     public static void main(String[] args) {
-        Object a = MyList.
+        MyList myList = new MyList();
+        myList.add(8);
+
+        System.out.println(myList.get(0));
     }
 }

@@ -8,9 +8,12 @@ public class MyList <E> {
     private Object elements[];
 
     public MyList () {
+        elements = new Object[DEFAULT_CAPACITY];
     }
 
+
     public MyList(int capacity) {
+        elements = new Object[capacity];
     }
 
     public void add(int index, E element) {
@@ -66,21 +69,35 @@ public class MyList <E> {
         return index;
     }
 
-//    public boolean add(E e) {
-//    }
+    public boolean add(E e) {
+        if (size == elements.length) {
+            ensureCapacity();
+        }
+        elements[size++] = e;
+        return true;
+    }
 
-    public void ensureCapacity(int minCapacity) {
+    public void ensureCapacity() {
         int newSize = elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
     }
 
-//    public E get(int i) {
-//    }
+    public E get(int i) {
+        return  (E) elements[i];
+    }
 
     public void clear() {
         for (int i = 0; i < elements.length; i++) {
             elements[i] = 0;
         }
         size = 0;
+    }
+
+    @Override
+    public String toString() {
+        return "MyList{" +
+                "size=" + size +
+                ", elements=" + Arrays.toString(elements) +
+                '}';
     }
 }
