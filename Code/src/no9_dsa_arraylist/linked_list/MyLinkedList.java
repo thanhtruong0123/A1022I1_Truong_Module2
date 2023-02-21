@@ -125,24 +125,26 @@ public class MyLinkedList <E> {
         }
     }
 
-    public E clone() {
+    public MyLinkedList<E> clone() {
         MyLinkedList<E> cloneList = new MyLinkedList<>();
         Node current = head;
         while (current != null) {
-            cloneList.add(current ,current.element);
+            cloneList.addLast(current.element);
             current = current.next;
         }
         return cloneList;
     }
 
     public boolean contains(E o) {
+        boolean result = false;
         Node current = head;
-        while (current.next != null) {
-            if (current.next.element.equals(o)) {
-                return true;
-            } else {
-                return false;
+        while (current != null) {
+            if (current.element.equals(o)) {
+                result = true;
+                break;
             }
+            current = current.next;
         }
+        return result;
     }
 }
