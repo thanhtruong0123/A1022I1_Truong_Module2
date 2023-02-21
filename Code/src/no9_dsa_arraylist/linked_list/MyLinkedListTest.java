@@ -8,9 +8,10 @@ public class MyLinkedListTest {
         newLinkedList.add(1,"b");
         newLinkedList.addLast("c");
 
-        newLinkedList.remove(1);
+//        newLinkedList.remove(1);
         newLinkedList.remove("a");
 
+        System.out.println("Mảng: ");
         for (int i = 0; i < newLinkedList.size(); i++) {
             System.out.println(newLinkedList.get(i));
         }

@@ -104,14 +104,45 @@ public class MyLinkedList <E> {
 
     public boolean remove(Object e) {
         boolean result = false;
+        if (head == null) {
+            return false;
+        } else if (head.element.equals(e)) {
+            head = head.next;
+            numNodes--;
+            return true;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                if (current.next.element.equals(e)) {
+                    current.next = current.next.next;
+                    result = true;
+                    break;
+                }
+                current = current.next;
+            }
+            numNodes--;
+            return result;
+        }
+    }
+
+    public E clone() {
+        MyLinkedList<E> cloneList = new MyLinkedList<>();
+        Node current = head;
+        while (current != null) {
+            cloneList.add(current ,current.element);
+            current = current.next;
+        }
+        return cloneList;
+    }
+
+    public boolean contains(E o) {
         Node current = head;
         while (current.next != null) {
-            if (current.next.element == e) {
-                current.next = current.next.next;
-                result = true;
+            if (current.next.element.equals(o)) {
+                return true;
+            } else {
+                return false;
             }
         }
-        numNodes--;
-        return result;
     }
 }
