@@ -28,17 +28,16 @@ public class MyLinkedList <E> {
     }
 
     private Node head;
-    private int numNodes;
     private int size;
 
     public MyLinkedList() {
+        size = 0;
     }
 
     public void addFirst(E element) {
         Node temp = head;
         head = new Node(element, temp);
-        head.next = temp;
-        numNodes++;
+        size++;
     }
 
     public void add(int index, E element) {
