@@ -1,44 +1,91 @@
 package no9_dsa_arraylist.linked_list;
 
 public class MyLinkedList <E> {
-    private Node head;
-    private int numNodes;
-
-    public class Node {
+    private class Node {
+        private E element;
         private Node next;
-        private Object data;
 
-        public Node(Object data) {
-            this.data = data;
+        public Node(E element, Node next) {
+            this.element = element;
+            this.next = next;
         }
 
-        public Object getData() {
-            return this.data;
+        public E getElement() {
+            return element;
+        }
+
+        public void setData(E element) {
+            this.element = element;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
         }
     }
+
+    private Node head;
+    private int numNodes;
+    private int size;
 
     public MyLinkedList() {
     }
 
-    public void add(int index, Object data) {
+    public void addFirst(E element) {
         Node temp = head;
-        Node holder;
-
-        for (int i = 0; i < index-1 && temp.next != null; i++) {
-            temp =temp.next;
-        }
-        holder = temp.next;
-            temp.next = new Node(data);
-            temp.next.next = holder;
-            numNodes++;
-    }
-
-    public void addFirst(Object data) {
-        Node temp = head;
-        head = new Node(data);
+        head = new Node(element, temp);
         head.next = temp;
         numNodes++;
     }
 
-    
+    public void add(int index, E element) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Invalid index: " + index);
+        } else if (index == 0) {
+            addFirst(element);
+        } else {
+            Node current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.next;
+            }
+            Node newNode = new Node(element, current.next);
+            current.next = newNode;
+            size++;
+        }
+    }
+
+    public boolean addLast(E element) {
+        boolean result = false;
+        if (size == 0) {
+            addFirst(element);
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            Node newNode = new Node(element, null);
+            current.next = newNode;
+            size++;
+            result = true;
+        }
+        return result;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public E get(int i) {
+        if (i < 0 || i >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node current = head;
+        for (int j = 0; j < i; j++) {
+            current = current.next;
+        }
+        return current.element;
+    }
 }

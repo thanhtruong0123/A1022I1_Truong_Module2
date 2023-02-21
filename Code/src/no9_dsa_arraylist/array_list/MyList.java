@@ -21,7 +21,7 @@ public class MyList <E> {
         }
 
         if (index < 0 || index > size){
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Invalid index: " + index);
         } else if (index == size) {
             elements[index] = element;
             size++;
@@ -38,7 +38,7 @@ public class MyList <E> {
 
     public E remove(int index) {
         if (index <= 0 || index > size) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Invalid index: " + index);
         } else if (index == size) {
             elements[index] = null;
             size--;
@@ -97,5 +97,12 @@ public class MyList <E> {
 
     public E get(int i) {
         return (E) elements[i];
+    }
+
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            elements[i] = null;
+        }
+        size = 0;
     }
 }
