@@ -14,7 +14,7 @@ public class MyLinkedList <E> {
             return element;
         }
 
-        public void setData(E element) {
+        public void setElement(E element) {
             this.element = element;
         }
 
@@ -28,20 +28,20 @@ public class MyLinkedList <E> {
     }
 
     private Node head;
-    private int size;
+    private int numNodes;
 
     public MyLinkedList() {
-        size = 0;
+        numNodes = 0;
     }
 
     public void addFirst(E element) {
         Node temp = head;
         head = new Node(element, temp);
-        size++;
+        numNodes++;
     }
 
     public void add(int index, E element) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index > numNodes) {
             throw new IndexOutOfBoundsException("Invalid index: " + index);
         } else if (index == 0) {
             addFirst(element);
@@ -52,13 +52,13 @@ public class MyLinkedList <E> {
             }
             Node newNode = new Node(element, current.next);
             current.next = newNode;
-            size++;
+            numNodes++;
         }
     }
 
     public boolean addLast(E element) {
         boolean result = false;
-        if (size == 0) {
+        if (numNodes == 0) {
             addFirst(element);
         } else {
             Node current = head;
@@ -67,18 +67,18 @@ public class MyLinkedList <E> {
             }
             Node newNode = new Node(element, null);
             current.next = newNode;
-            size++;
+            numNodes++;
             result = true;
         }
         return result;
     }
 
     public int size() {
-        return size;
+        return numNodes;
     }
 
     public E get(int i) {
-        if (i < 0 || i >= size) {
+        if (i < 0 || i >= numNodes) {
             throw new IndexOutOfBoundsException();
         }
         Node current = head;
@@ -86,5 +86,32 @@ public class MyLinkedList <E> {
             current = current.next;
         }
         return current.element;
+    }
+
+    public E remove(int index) {
+        if (index < 0 || index >= numNodes) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        E removedValue = current.next.element;
+        current.next = current.next.next;
+        numNodes--;
+        return removedValue;
+    }
+
+    public boolean remove(Object e) {
+        boolean result = false;
+        Node current = head;
+        while (current.next != null) {
+            if (current.next.element == e) {
+                current.next = current.next.next;
+                result = true;
+            }
+        }
+        numNodes--;
+        return result;
     }
 }
