@@ -116,11 +116,11 @@ public class MyLinkedList <E> {
                 if (current.next.element.equals(e)) {
                     current.next = current.next.next;
                     result = true;
+                    numNodes--;
                     break;
                 }
                 current = current.next;
             }
-            numNodes--;
             return result;
         }
     }

@@ -16,8 +16,8 @@ public class MyLinkedListTest {
             System.out.println(newLinkedList.get(i));
         }
 
-        System.out.println("Kiểm tra PT 'contains': ");
-        System.out.println(newLinkedList.contains("a"));
-        System.out.println(newLinkedList.contains("c"));
+//        System.out.println("Kiểm tra PT 'contains': ");
+//        System.out.println(newLinkedList.contains("a"));
+//        System.out.println(newLinkedList.contains("c"));
     }
 }
