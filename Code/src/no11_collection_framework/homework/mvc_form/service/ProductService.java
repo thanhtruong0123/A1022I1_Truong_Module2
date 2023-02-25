@@ -20,7 +20,14 @@ public class ProductService implements IProductService {
         repository.edit(id, name, value);
     }
 
+    public void remove(int id) {
+        repository.remove(id);
+    }
+
     public void search(String name) {
         repository.search(name);
+    }
+    public void sort(int type) {
+        repository.sort(type);
     }
 }

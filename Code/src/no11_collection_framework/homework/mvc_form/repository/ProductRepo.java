@@ -3,6 +3,8 @@ package no11_collection_framework.homework.mvc_form.repository;
 import no11_collection_framework.homework.mvc_form.model.Product;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductRepo implements IProductRepo {
@@ -35,11 +37,29 @@ public class ProductRepo implements IProductRepo {
         }
     }
 
+    public void remove(int id) {
+        for (int i = 0; i < productArray.size(); i++) {
+            if (id == productArray.get(i).getId()) {
+                productArray.remove(i);
+            }
+        }
+    }
+
     public void search(String name) {
         for (int i = 0; i < productArray.size(); i++) {
             if (name.equals(productArray.get(i).getName())) {
                 System.out.println(productArray.get(i));
             }
+        }
+    }
+
+    public void sort(int type) {
+        if (type == 1) {
+            Collections.sort(productArray);
+        } else if (type == 2) {
+            Collections.sort(productArray, Collections.reverseOrder());
+        } else {
+            System.out.println("Please, only type 1 or 2");
         }
     }
 }

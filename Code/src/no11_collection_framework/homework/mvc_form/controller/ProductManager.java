@@ -59,10 +59,29 @@ public class ProductManager {
                         System.out.println("Invalid input, please enter a number.");
                     }
                     break;
+                case 4: // remove
+                    try {
+                        System.out.println("Enter id: ");
+                        int removeId = Integer.parseInt(sc.nextLine());
+                        service.remove(removeId);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input, please enter a number.");
+                    }
+                    break;
                 case 5: // search
                     System.out.println("Enter a name to search");
                     String findName = sc.nextLine();
                     service.search(findName);
+                    break;
+                case 6: // sort
+                    System.out.println("Select type to sort");
+                    System.out.println("1. Sort the products by price from low to high");
+                    System.out.println("2. Sort the products by price from high to low");
+                    int type = Integer.parseInt(sc.nextLine());
+                    service.sort(type);
+                    break;
+                case 7: // exit
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid selection, please try again.");

@@ -1,6 +1,6 @@
 package no11_collection_framework.homework.mvc_form.model;
 
-public class Product {
+public class Product implements Comparable<Product> {
     private String name;
     private int id;
     private long value;
@@ -45,5 +45,10 @@ public class Product {
                 ", id=" + id +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product otherProduct) {
+        return Long.compare(this.value, otherProduct.getValue());
     }
 }
