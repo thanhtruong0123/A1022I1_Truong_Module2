@@ -14,7 +14,6 @@ public class StringCounting {
 
         Map<String, Integer> myMap = new TreeMap<>();
 
-
         for (int i = 0; i < arr.length; i++) {
             String word = arr[i];
             int count = 0;
