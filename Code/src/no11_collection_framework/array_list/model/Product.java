@@ -1,6 +1,6 @@
 package no11_collection_framework.array_list.model;
 
-public class Product implements Comparable<Product> {
+public class Product implements Comparable <Product> {
     private String name;
     private int id;
     private long value;

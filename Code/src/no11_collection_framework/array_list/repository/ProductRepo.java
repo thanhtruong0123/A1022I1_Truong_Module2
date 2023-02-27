@@ -23,8 +23,15 @@ public class ProductRepo implements IProductRepo {
     }
 
     public void add(int id, String name, long value) {
-        Product product= new Product(id, name, value);
-        productArray.add(product);
+        for (int i = 0; i < productArray.size(); i++) {
+            if (id == productArray.get(i).getId()) {
+                System.out.println("This 'id' has been existed. Select '2' to input another 'id'");
+                break;
+            } else {
+                Product product= new Product(id, name, value);
+                productArray.add(product);
+            }
+        }
     }
 
     public void edit(int id, String newName, long newValue) {
