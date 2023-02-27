@@ -1,6 +1,6 @@
-package no11_collection_framework.homework.mvc_form.service;
+package no11_collection_framework.array_list.service;
 
-import no11_collection_framework.homework.mvc_form.model.Product;
+import no11_collection_framework.array_list.model.Product;
 
 public interface IProductService {
     public Product show();

@@ -1,4 +1,4 @@
-package no11_collection_framework.homework.mvc_form.model;
+package no11_collection_framework.array_list.model;
 
 public class Product implements Comparable<Product> {
     private String name;

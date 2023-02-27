@@ -1,4 +1,4 @@
-package no11_collection_framework.homework.mvc_form.repository;
+package no11_collection_framework.array_list.repository;
 
 public interface IProductRepo {
     public void show();

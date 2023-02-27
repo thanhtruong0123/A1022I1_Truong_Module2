@@ -1,9 +1,8 @@
-package no11_collection_framework.homework.mvc_form.repository;
+package no11_collection_framework.array_list.repository;
 
-import no11_collection_framework.homework.mvc_form.model.Product;
+import no11_collection_framework.array_list.model.Product;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

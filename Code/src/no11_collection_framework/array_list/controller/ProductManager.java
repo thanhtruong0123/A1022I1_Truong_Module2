@@ -1,8 +1,7 @@
-package no11_collection_framework.homework.mvc_form.controller;
+package no11_collection_framework.array_list.controller;
 
-import no11_collection_framework.homework.mvc_form.repository.ProductRepo;
-import no11_collection_framework.homework.mvc_form.service.IProductService;
-import no11_collection_framework.homework.mvc_form.service.ProductService;
+import no11_collection_framework.array_list.service.IProductService;
+import no11_collection_framework.array_list.service.ProductService;
 
 import java.util.Scanner;
 

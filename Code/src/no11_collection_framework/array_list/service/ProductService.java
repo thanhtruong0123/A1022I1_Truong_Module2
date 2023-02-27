@@ -1,8 +1,8 @@
-package no11_collection_framework.homework.mvc_form.service;
+package no11_collection_framework.array_list.service;
 
-import no11_collection_framework.homework.mvc_form.model.Product;
-import no11_collection_framework.homework.mvc_form.repository.IProductRepo;
-import no11_collection_framework.homework.mvc_form.repository.ProductRepo;
+import no11_collection_framework.array_list.model.Product;
+import no11_collection_framework.array_list.repository.IProductRepo;
+import no11_collection_framework.array_list.repository.ProductRepo;
 
 public class ProductService implements IProductService {
     private IProductRepo repository = new ProductRepo();
