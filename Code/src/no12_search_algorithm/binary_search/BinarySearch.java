@@ -31,9 +31,9 @@ public class BinarySearch {
             if (arr[middle] == value) {
                 return middle;
             } else if (value > arr[middle]) {
-                binarySearch(arr,middle + 1, right, value);
+                return binarySearch(arr,middle + 1, right, value);
             } else {
-                binarySearch(arr,middle + 1, middle - 1, value);
+                return binarySearch(arr,middle + 1, middle - 1, value);
             }
         }
         return -1;
