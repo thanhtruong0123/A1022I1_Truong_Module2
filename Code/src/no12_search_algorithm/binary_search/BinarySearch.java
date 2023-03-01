@@ -20,20 +20,18 @@ public class BinarySearch {
 
         System.out.println("Enter the value to find in array");
         int value = sc.nextInt();
-        binarySearch(arr, 0, arr.length -1, value);
+        System.out.println(binarySearch(arr, 0, arr.length -1, value));
     }
 
     public static int binarySearch(int[] arr, int left, int right, int value) {
-
         while (left <= right) {
             int middle = (left + right) / 2;
-
             if (arr[middle] == value) {
                 return middle;
             } else if (value > arr[middle]) {
                 return binarySearch(arr,middle + 1, right, value);
             } else {
-                return binarySearch(arr,middle + 1, middle - 1, value);
+                return binarySearch(arr, left, middle - 1, value);
             }
         }
         return -1;
