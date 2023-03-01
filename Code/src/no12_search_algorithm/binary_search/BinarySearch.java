@@ -31,12 +31,11 @@ public class BinarySearch {
             if (arr[middle] == value) {
                 return middle;
             } else if (value > arr[middle]) {
-                left = middle + 1;
+                binarySearch(arr,middle + 1, right, value);
             } else {
-                right = middle - 1;
+                binarySearch(arr,middle + 1, middle - 1, value);
             }
         }
-
         return -1;
     }
 }
