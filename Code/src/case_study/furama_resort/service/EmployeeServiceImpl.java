@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void addNew() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập id: ");
-        int id = sc.nextInt();
+        int id = Integer.parseInt(sc.nextLine());
         System.out.print("Nhập tên: ");
         String name = sc.nextLine();
         System.out.print("Nhập ngày sinh: ");
@@ -77,7 +77,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 String position = sc.nextLine();
                 System.out.print("Nhập lương: ");
                 int salary = sc.nextInt();
-
             }
         }
     }

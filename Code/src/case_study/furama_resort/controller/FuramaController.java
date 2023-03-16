@@ -1,13 +1,12 @@
 package case_study.furama_resort.controller;
 
-import case_study.furama_resort.service.EmployeeService;
-import case_study.furama_resort.service.EmployeeServiceImpl;
-import case_study.furama_resort.service.Service;
+import case_study.furama_resort.service.*;
 
 import java.util.Scanner;
 
 public class FuramaController {
     static EmployeeService employee = new EmployeeServiceImpl();
+    static CustomerService customer = new CustomerServiceImpl();
 
     public static void main(String[] args) {
         displayMainMenu();
@@ -63,37 +62,65 @@ public class FuramaController {
         System.out.println("4. Return main menu");
         System.out.println("======================");
 
-        try {
-            int select = sc.nextInt();
-            switch (select) {
-                case 1:
-                    employee.display();
-                    break;
-                case 2:
-                    employee.addNew();
-                    break;
-                case 3:
-                    employee.editService();
-                    break;
-                case 4:
-                    displayMainMenu();
-                    break;
-                default:
-                    System.out.println("Chỉ nhập số từ 1 - 4");
-                    break;
+        while (true) {
+            try {
+                int select = Integer.parseInt(sc.nextLine());
+                switch (select) {
+                    case 1:
+                        employee.display();
+                        break;
+                    case 2:
+                        employee.addNew();
+                        break;
+                    case 3:
+                        employee.editService();
+                        break;
+                    case 4:
+                        displayMainMenu();
+                        break;
+                    default:
+                        System.out.println("Chỉ nhập số từ 1 - 4");
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Chỉ nhập số");
             }
-        } catch (NumberFormatException e) {
-            System.out.println("Chỉ nhập số");
         }
     }
 
     public static void customerManagement() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("========Customer Management========");
         System.out.println("1. Display list customer");
         System.out.println("2. Add new customer");
         System.out.println("3. Edit customer");
         System.out.println("4. Return main menu");
         System.out.println("======================");
+
+        while (true) {
+            try {
+                int select = Integer.parseInt(sc.nextLine());
+                switch (select) {
+                    case 1:
+                        customer.display();
+                        break;
+                    case 2:
+                        customer.addNew();
+                        break;
+                    case 3:
+                        customer.editService();
+                        break;
+                    case 4:
+                        displayMainMenu();
+                        break;
+                    default:
+                        System.out.println("Chỉ nhập số từ 1 - 4");
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Chỉ nhập số");
+            }
+        }
     }
 
     public static void facilityManagement() {
