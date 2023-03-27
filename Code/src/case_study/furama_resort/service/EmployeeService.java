@@ -1,12 +1,14 @@
 package case_study.furama_resort.service;
 
+import java.io.IOException;
+
 public interface EmployeeService extends Service {
     @Override
-    void display();
+    void display() throws IOException;
 
     @Override
-    void addNew();
+    void addNew() throws IOException;
 
     @Override
-    void editService();
+    void editService() throws IOException;
 }

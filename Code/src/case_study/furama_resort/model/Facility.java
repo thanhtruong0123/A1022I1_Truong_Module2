@@ -1,6 +1,9 @@
 package case_study.furama_resort.model;
 
+import java.util.Objects;
+
 public abstract class Facility {
+    private String serviceId;
     private String serviceName;
     private double area;
     private int fee;
@@ -10,12 +13,21 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(String serviceName, double area, int fee, int maxPersonNum, String rentType) {
+    public Facility(String serviceId, String serviceName, double area, int fee, int maxPersonNum, String rentType) {
+        this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.area = area;
         this.fee = fee;
         this.maxPersonNum = maxPersonNum;
         this.rentType = rentType;
+    }
+
+    public String getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
     public String getServiceName() {
@@ -60,12 +72,24 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Furama{" +
-                "serviceName='" + serviceName + '\'' +
-                ", area=" + area +
-                ", fee=" + fee +
-                ", maxPersonNum=" + maxPersonNum +
-                ", rentType='" + rentType + '\'' +
-                '}';
+        return  "Mã Dịch Vụ: " + serviceId +
+                "Tên Dịch Vụ: " + serviceName +
+                ", Diện Tích: " + area +
+                ", Giá: " + fee +
+                ", Số Người Tối Đa: " + maxPersonNum +
+                ", Loại Thuê: " + rentType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Facility facility = (Facility) o;
+        return serviceName.equals(facility.serviceName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(serviceName);
     }
 }

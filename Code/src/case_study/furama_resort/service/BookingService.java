@@ -1,10 +1,6 @@
 package case_study.furama_resort.service;
 
 public interface BookingService extends Service {
-    void creatContract();
-    void displayContract();
-    void editContract();
-
     @Override
     void display();
 
@@ -13,4 +9,8 @@ public interface BookingService extends Service {
 
     @Override
     void editService();
+
+    void createContract();
+
+    void displayContract();
 }

@@ -54,7 +54,7 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public String getIndentifyNumber() {
+    public String getIdentifyNumber() {
         return identifyNumber;
     }
 
@@ -80,14 +80,12 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", gender='" + gender + '\'' +
-                ", indentifyNumber=" + identifyNumber +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return  "ID: " + id +
+                ", Tên: '" + name + '\'' +
+                ", Sinh Nhật: '" + birthday + '\'' +
+                ", Giới Tính: '" + gender + '\'' +
+                ", CMND: " + identifyNumber +
+                ", Số Điện Thoại: " + phoneNumber +
+                ", Email: " + email + ", " + '\'';
     }
 }

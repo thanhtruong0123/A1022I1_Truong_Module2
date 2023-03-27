@@ -1,7 +1,7 @@
 package case_study.furama_resort.model;
 
-public class Booking {
-    private int bookingId;
+public class Booking implements Comparable{
+    private String bookingId;
     private String beginDay;
     private String endDay;
     private int customerId;
@@ -11,7 +11,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int bookingId, String beginDay, String endDay, int customerId, String serviceName, String typeService) {
+    public Booking(String bookingId, String beginDay, String endDay, int customerId, String serviceName, String typeService) {
         this.bookingId = bookingId;
         this.beginDay = beginDay;
         this.endDay = endDay;
@@ -20,11 +20,11 @@ public class Booking {
         this.typeService = typeService;
     }
 
-    public int getBookingId() {
+    public String getBookingId() {
         return bookingId;
     }
 
-    public void setBookingId(int bookingId) {
+    public void setBookingId(String bookingId) {
         this.bookingId = bookingId;
     }
 
@@ -78,5 +78,10 @@ public class Booking {
                 ", serviceName='" + serviceName + '\'' +
                 ", typeService='" + typeService + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

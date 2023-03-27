@@ -36,9 +36,9 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "type='" + type + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+        return  super.toString() +
+                "Loại: " + type + '\'' +
+                ", Địa Chỉ: " + address + '\''
+                + "\n";
     }
 }
